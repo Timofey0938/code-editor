@@ -1,0 +1,32 @@
+@import '@/assets/scss/variables.scss';
+
+.input {
+  height: 20px;
+  width: 100%;
+  display: flex;
+  background-color: $background-color;
+  border: 2px solid $background-color;
+  font-size: 16px;
+  font-family: Consolas;
+  color: $font-color;
+
+  .char {
+    width: 8px;
+    border-left: 2px solid $background-color;
+  }
+
+  .isTargeted {
+    animation: blink 1.2s linear infinite;
+  }
+
+  @keyframes blink {
+    0% { border-left: 2px solid $font-color; }
+    50% { border-left: 2px solid $font-color; }
+    51% { border-left: 2px solid $background-color; }
+  }
+}
+
+.isFocused {
+  border-top: 2px solid $border-color;
+  border-bottom: 2px solid $border-color;
+}
